@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE messages [
+<!ELEMENT messages (message)>
+<!ELEMENT message (#PCDATA | emetteur | recepteur)*>
+<!ELEMENT emetteur (#PCDATA)>
+<!ATTLIST message type (text | vocal | fichier) #REQUIRED>
+<!ELEMENT recepteur (#PCDATA | contact | groupe)*>
+<!ELEMENT contact (contact_nomComplet)>
+<!ELEMENT contact_nomComplet (#PCDATA)>
+<!ELEMENT groupe (nom_groupe , fichier_groupe)>
+<!ELEMENT nom_groupe (#PCDATA)>
+<!ELEMENT fichier_groupe (#PCDATA)>
+<!ATTLIST fichier_groupe type (text | vocal | fichier) #REQUIRED>
+]>
+<messages>
+	<message type="text">
+		<emetteur> Brahim </emetteur>
+		<recepteur> 
+			<contact> 
+				<contact_nomComplet> FICHALE KEZIRE</contact_nomComplet>
+			</contact>
+			<groupe> 
+				<nom_groupe> M1SRT</nom_groupe>
+				<fichier_groupe type="fichier"> </fichier_groupe>
+			</groupe>
+		 </recepteur>
+	</message>
+	</messages>
